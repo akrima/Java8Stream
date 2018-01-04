@@ -40,11 +40,8 @@ public class Main {
 		System.out.println(maxAge.get());
 		System.out.println(minAge.get());
 		
-		System.out.println("*************** Print person with average age  *****************");
+		System.out.println("*************** Print person witch age is equals to the average age of all persons  *****************");
 		persons.stream().filter(pers->pers.getAge().equals(persons.stream().collect(Collectors.averagingInt(p->p.getAge())).intValue())).forEach(System.out::println);
-		
-		System.out.println("*************** Print all persons witch ages are gratter than average age  *****************");
-		persons.stream().filter(pers->pers.getAge() > persons.stream().collect(Collectors.averagingInt(p->p.getAge())).intValue()).forEach(System.out::println);
 		
 		System.out.println("*************** Print all persons witch ages are gratter than average age  *****************");
 		persons.stream().filter(pers->pers.getAge() > persons.stream().collect(Collectors.averagingInt(p->p.getAge())).intValue()).forEach(System.out::println);
